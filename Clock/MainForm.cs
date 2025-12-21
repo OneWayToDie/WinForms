@@ -58,5 +58,9 @@ namespace Clock
 			this.TopMost = true;
 			this.TopMost = false;
 		}
+		//3. Часы должны запускаться в правом верхнем углу, независимо от размнров экрана;
+		//Layout, location x = 1595, y = 0
+		//Start Position = Manual
+
 	}
 }
