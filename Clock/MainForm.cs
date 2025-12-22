@@ -8,15 +8,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Clock
 {
 	public partial class MainForm : Form
 	{
+
+		private ContextMenuStrip contextMenuClock;
 		public MainForm()
 		{
 			InitializeComponent();
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
+			InitializeContextMenu();
+		}
+		private void InitializeContextMenu()
+		{
+			ContextMenuStrip clockMenu = new ContextMenuStrip();
+			clockMenu.Items.Add("Показать/скрыть панель", null, (s, e) =>
+			{
+				bool currentVisibility = cbShowDate.Visible;
+				SetVisibility(!currentVisibility);
+			});
+			clockMenu.Items.Add("Поверх всех окон", null, (s, e) =>
+			{
+				this.TopMost = !this.TopMost;
+			});
+			clockMenu.Items.Add("Выход", null, (s, e) => Application.Exit());
+			labelTime.ContextMenuStrip = clockMenu;
+
+
+			ContextMenuStrip trayMenu = new ContextMenuStrip();
+			trayMenu.Items.Add("Открыть", null, (s, e) =>
+			{
+				SetVisibility(true);
+				this.Show();
+			});
+			trayMenu.Items.Add("Скрыть", null, (s, e) => SetVisibility(false));
+			trayMenu.Items.Add("Выход", null, (s, e) => Application.Exit());
+
+			notifyIcon.ContextMenuStrip = trayMenu;
+
 		}
 		void SetVisibility(bool visible)
 		{
@@ -58,9 +90,8 @@ namespace Clock
 			this.TopMost = true;
 			this.TopMost = false;
 		}
-		//3. Часы должны запускаться в правом верхнем углу, независимо от размнров экрана;
+		//3. Часы должны запускаться в правом верхнем углу, независимо от размеров экрана;
 		//Layout, location x = 1595, y = 0
 		//Start Position = Manual
-
 	}
 }

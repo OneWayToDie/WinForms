@@ -112,6 +112,7 @@
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "MainForm";
+			this.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Clock_PV_521";
 			this.ResumeLayout(false);
