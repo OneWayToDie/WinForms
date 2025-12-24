@@ -41,9 +41,22 @@
 			this.tsmiShowConsole = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.tsmiFont = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiCustomFont = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsmiColor = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsmiForegroundColor = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiForegroundBlack = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiForegroundWhite = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiForegroundYellow = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiForegroundGreen = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiForegroundRed = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiForegroundBlue = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsmiBackgroundColor = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiBackgroundBlack = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiBackgroundWhite = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiBackgroundYellow = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiBackgroundGreen = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiBackgroundRed = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsmiBackgroundBlue = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.tsmiAlarms = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -148,9 +161,17 @@
 			// 
 			// tsmiFont
 			// 
+			this.tsmiFont.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCustomFont});
 			this.tsmiFont.Name = "tsmiFont";
 			this.tsmiFont.Size = new System.Drawing.Size(180, 22);
 			this.tsmiFont.Text = "Font";
+			// 
+			// tsmiCustomFont
+			// 
+			this.tsmiCustomFont.Name = "tsmiCustomFont";
+			this.tsmiCustomFont.Size = new System.Drawing.Size(180, 22);
+			this.tsmiCustomFont.Text = "Custom Font";
 			// 
 			// tsmiColor
 			// 
@@ -163,15 +184,125 @@
 			// 
 			// tsmiForegroundColor
 			// 
+			this.tsmiForegroundColor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiForegroundBlack,
+            this.tsmiForegroundWhite,
+            this.tsmiForegroundYellow,
+            this.tsmiForegroundGreen,
+            this.tsmiForegroundRed,
+            this.tsmiForegroundBlue});
 			this.tsmiForegroundColor.Name = "tsmiForegroundColor";
-			this.tsmiForegroundColor.Size = new System.Drawing.Size(168, 22);
+			this.tsmiForegroundColor.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundColor.Text = "Foreground color";
+			// 
+			// tsmiForegroundBlack
+			// 
+			this.tsmiForegroundBlack.CheckOnClick = true;
+			this.tsmiForegroundBlack.Name = "tsmiForegroundBlack";
+			this.tsmiForegroundBlack.Size = new System.Drawing.Size(180, 22);
+			this.tsmiForegroundBlack.Text = "Black";
+			this.tsmiForegroundBlack.Click += new System.EventHandler(this.tsmiForegroundBlack_Click);
+			// 
+			// tsmiForegroundWhite
+			// 
+			this.tsmiForegroundWhite.CheckOnClick = true;
+			this.tsmiForegroundWhite.Name = "tsmiForegroundWhite";
+			this.tsmiForegroundWhite.Size = new System.Drawing.Size(180, 22);
+			this.tsmiForegroundWhite.Text = "White";
+			this.tsmiForegroundWhite.Click += new System.EventHandler(this.tsmiForegroundWhite_Click);
+			// 
+			// tsmiForegroundYellow
+			// 
+			this.tsmiForegroundYellow.CheckOnClick = true;
+			this.tsmiForegroundYellow.Name = "tsmiForegroundYellow";
+			this.tsmiForegroundYellow.Size = new System.Drawing.Size(180, 22);
+			this.tsmiForegroundYellow.Text = "Yellow";
+			this.tsmiForegroundYellow.Click += new System.EventHandler(this.tsmiForegroundYellow_Click);
+			// 
+			// tsmiForegroundGreen
+			// 
+			this.tsmiForegroundGreen.CheckOnClick = true;
+			this.tsmiForegroundGreen.Name = "tsmiForegroundGreen";
+			this.tsmiForegroundGreen.Size = new System.Drawing.Size(180, 22);
+			this.tsmiForegroundGreen.Text = "Green";
+			this.tsmiForegroundGreen.Click += new System.EventHandler(this.tsmiForegroundGreen_Click);
+			// 
+			// tsmiForegroundRed
+			// 
+			this.tsmiForegroundRed.CheckOnClick = true;
+			this.tsmiForegroundRed.Name = "tsmiForegroundRed";
+			this.tsmiForegroundRed.Size = new System.Drawing.Size(180, 22);
+			this.tsmiForegroundRed.Text = "Red";
+			this.tsmiForegroundRed.Click += new System.EventHandler(this.tsmiForegroundRed_Click);
+			// 
+			// tsmiForegroundBlue
+			// 
+			this.tsmiForegroundBlue.CheckOnClick = true;
+			this.tsmiForegroundBlue.Name = "tsmiForegroundBlue";
+			this.tsmiForegroundBlue.Size = new System.Drawing.Size(180, 22);
+			this.tsmiForegroundBlue.Text = "Blue";
+			this.tsmiForegroundBlue.Click += new System.EventHandler(this.tsmiForegroundBlue_Click);
 			// 
 			// tsmiBackgroundColor
 			// 
+			this.tsmiBackgroundColor.CheckOnClick = true;
+			this.tsmiBackgroundColor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiBackgroundBlack,
+            this.tsmiBackgroundWhite,
+            this.tsmiBackgroundYellow,
+            this.tsmiBackgroundGreen,
+            this.tsmiBackgroundRed,
+            this.tsmiBackgroundBlue});
 			this.tsmiBackgroundColor.Name = "tsmiBackgroundColor";
-			this.tsmiBackgroundColor.Size = new System.Drawing.Size(168, 22);
+			this.tsmiBackgroundColor.Size = new System.Drawing.Size(180, 22);
 			this.tsmiBackgroundColor.Text = "Background color";
+			// 
+			// tsmiBackgroundBlack
+			// 
+			this.tsmiBackgroundBlack.Name = "tsmiBackgroundBlack";
+			this.tsmiBackgroundBlack.Size = new System.Drawing.Size(180, 22);
+			this.tsmiBackgroundBlack.Text = "Black";
+			this.tsmiBackgroundBlack.Click += new System.EventHandler(this.tsmiBackgroundBlack_Click);
+			// 
+			// tsmiBackgroundWhite
+			// 
+			this.tsmiBackgroundWhite.CheckOnClick = true;
+			this.tsmiBackgroundWhite.Name = "tsmiBackgroundWhite";
+			this.tsmiBackgroundWhite.Size = new System.Drawing.Size(180, 22);
+			this.tsmiBackgroundWhite.Text = "White";
+			this.tsmiBackgroundWhite.Click += new System.EventHandler(this.tsmiBackgroundWhite_Click);
+			// 
+			// tsmiBackgroundYellow
+			// 
+			this.tsmiBackgroundYellow.CheckOnClick = true;
+			this.tsmiBackgroundYellow.Name = "tsmiBackgroundYellow";
+			this.tsmiBackgroundYellow.Size = new System.Drawing.Size(180, 22);
+			this.tsmiBackgroundYellow.Text = "Yellow";
+			this.tsmiBackgroundYellow.Click += new System.EventHandler(this.tsmiBackgroundYellow_Click);
+			// 
+			// tsmiBackgroundGreen
+			// 
+			this.tsmiBackgroundGreen.CheckOnClick = true;
+			this.tsmiBackgroundGreen.Name = "tsmiBackgroundGreen";
+			this.tsmiBackgroundGreen.Size = new System.Drawing.Size(180, 22);
+			this.tsmiBackgroundGreen.Text = "Green";
+			this.tsmiBackgroundGreen.Click += new System.EventHandler(this.tsmiBackgroundGreen_Click);
+			// 
+			// tsmiBackgroundRed
+			// 
+			this.tsmiBackgroundRed.CheckOnClick = true;
+			this.tsmiBackgroundRed.Name = "tsmiBackgroundRed";
+			this.tsmiBackgroundRed.Size = new System.Drawing.Size(180, 22);
+			this.tsmiBackgroundRed.Text = "Red";
+			this.tsmiBackgroundRed.Click += new System.EventHandler(this.tsmiBackgroundRed_Click);
+			// 
+			// tsmiBackgroundBlue
+			// 
+			this.tsmiBackgroundBlue.CheckOnClick = true;
+			this.tsmiBackgroundBlue.Name = "tsmiBackgroundBlue";
+			this.tsmiBackgroundBlue.Size = new System.Drawing.Size(180, 22);
+			this.tsmiBackgroundBlue.Text = "Blue";
+			this.tsmiBackgroundBlue.Click += new System.EventHandler(this.tsmiBackgroundBlue_Click);
 			// 
 			// toolStripSeparator4
 			// 
@@ -306,6 +437,19 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem tsmiQuit;
 		private System.Windows.Forms.ToolStripMenuItem tsmiShowControls;
+		private System.Windows.Forms.ToolStripMenuItem tsmiForegroundBlack;
+		private System.Windows.Forms.ToolStripMenuItem tsmiForegroundWhite;
+		private System.Windows.Forms.ToolStripMenuItem tsmiForegroundYellow;
+		private System.Windows.Forms.ToolStripMenuItem tsmiForegroundGreen;
+		private System.Windows.Forms.ToolStripMenuItem tsmiForegroundRed;
+		private System.Windows.Forms.ToolStripMenuItem tsmiForegroundBlue;
+		private System.Windows.Forms.ToolStripMenuItem tsmiBackgroundBlack;
+		private System.Windows.Forms.ToolStripMenuItem tsmiBackgroundWhite;
+		private System.Windows.Forms.ToolStripMenuItem tsmiBackgroundYellow;
+		private System.Windows.Forms.ToolStripMenuItem tsmiBackgroundGreen;
+		private System.Windows.Forms.ToolStripMenuItem tsmiBackgroundRed;
+		private System.Windows.Forms.ToolStripMenuItem tsmiBackgroundBlue;
+		private System.Windows.Forms.ToolStripMenuItem tsmiCustomFont;
 	}
 }
 

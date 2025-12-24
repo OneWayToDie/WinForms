@@ -90,5 +90,65 @@ namespace Clock
 			tsmiShowWeekday.Checked = cbShowWeekday.Checked;
 
 		private void tsmiQuit_Click(object sender, EventArgs e) => this.Close();
+
+		private void tsmiForegroundBlack_Click(object sender, EventArgs e)
+		{
+			labelTime.ForeColor = Color.Black;
+		}
+
+		private void tsmiForegroundWhite_Click(object sender, EventArgs e)
+		{
+			labelTime.ForeColor = Color.White;
+		}
+
+		private void tsmiForegroundYellow_Click(object sender, EventArgs e)
+		{
+			labelTime.ForeColor = Color.Yellow;
+		}
+
+		private void tsmiForegroundGreen_Click(object sender, EventArgs e)
+		{
+			labelTime.ForeColor = Color.Green;
+		}
+
+		private void tsmiForegroundRed_Click(object sender, EventArgs e)
+		{
+			labelTime.ForeColor = Color.Red;
+		}
+
+		private void tsmiForegroundBlue_Click(object sender, EventArgs e)
+		{
+			labelTime.ForeColor = Color.Blue;
+		}
+
+		private void tsmiBackgroundBlack_Click(object sender, EventArgs e)
+		{
+			labelTime.BackColor = Color.Black;
+		}
+
+		private void tsmiBackgroundWhite_Click(object sender, EventArgs e)
+		{
+			labelTime.BackColor = Color.White;
+		}
+
+		private void tsmiBackgroundYellow_Click(object sender, EventArgs e)
+		{
+			labelTime.BackColor = Color.Yellow;
+		}
+
+		private void tsmiBackgroundGreen_Click(object sender, EventArgs e)
+		{
+			labelTime.BackColor = Color.Green;
+		}
+
+		private void tsmiBackgroundRed_Click(object sender, EventArgs e)
+		{
+			labelTime.BackColor = Color.Red;
+		}
+
+		private void tsmiBackgroundBlue_Click(object sender, EventArgs e)
+		{
+			labelTime.BackColor = Color.Blue;
+		}
 	}
 }
