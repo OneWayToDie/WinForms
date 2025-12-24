@@ -197,7 +197,6 @@
 			// 
 			// tsmiForegroundBlack
 			// 
-			this.tsmiForegroundBlack.CheckOnClick = true;
 			this.tsmiForegroundBlack.Name = "tsmiForegroundBlack";
 			this.tsmiForegroundBlack.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundBlack.Text = "Black";
@@ -205,7 +204,6 @@
 			// 
 			// tsmiForegroundWhite
 			// 
-			this.tsmiForegroundWhite.CheckOnClick = true;
 			this.tsmiForegroundWhite.Name = "tsmiForegroundWhite";
 			this.tsmiForegroundWhite.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundWhite.Text = "White";
@@ -213,7 +211,6 @@
 			// 
 			// tsmiForegroundYellow
 			// 
-			this.tsmiForegroundYellow.CheckOnClick = true;
 			this.tsmiForegroundYellow.Name = "tsmiForegroundYellow";
 			this.tsmiForegroundYellow.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundYellow.Text = "Yellow";
@@ -221,7 +218,6 @@
 			// 
 			// tsmiForegroundGreen
 			// 
-			this.tsmiForegroundGreen.CheckOnClick = true;
 			this.tsmiForegroundGreen.Name = "tsmiForegroundGreen";
 			this.tsmiForegroundGreen.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundGreen.Text = "Green";
@@ -229,7 +225,6 @@
 			// 
 			// tsmiForegroundRed
 			// 
-			this.tsmiForegroundRed.CheckOnClick = true;
 			this.tsmiForegroundRed.Name = "tsmiForegroundRed";
 			this.tsmiForegroundRed.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundRed.Text = "Red";
@@ -237,7 +232,6 @@
 			// 
 			// tsmiForegroundBlue
 			// 
-			this.tsmiForegroundBlue.CheckOnClick = true;
 			this.tsmiForegroundBlue.Name = "tsmiForegroundBlue";
 			this.tsmiForegroundBlue.Size = new System.Drawing.Size(180, 22);
 			this.tsmiForegroundBlue.Text = "Blue";
@@ -266,7 +260,6 @@
 			// 
 			// tsmiBackgroundWhite
 			// 
-			this.tsmiBackgroundWhite.CheckOnClick = true;
 			this.tsmiBackgroundWhite.Name = "tsmiBackgroundWhite";
 			this.tsmiBackgroundWhite.Size = new System.Drawing.Size(180, 22);
 			this.tsmiBackgroundWhite.Text = "White";
@@ -274,7 +267,6 @@
 			// 
 			// tsmiBackgroundYellow
 			// 
-			this.tsmiBackgroundYellow.CheckOnClick = true;
 			this.tsmiBackgroundYellow.Name = "tsmiBackgroundYellow";
 			this.tsmiBackgroundYellow.Size = new System.Drawing.Size(180, 22);
 			this.tsmiBackgroundYellow.Text = "Yellow";
@@ -282,7 +274,6 @@
 			// 
 			// tsmiBackgroundGreen
 			// 
-			this.tsmiBackgroundGreen.CheckOnClick = true;
 			this.tsmiBackgroundGreen.Name = "tsmiBackgroundGreen";
 			this.tsmiBackgroundGreen.Size = new System.Drawing.Size(180, 22);
 			this.tsmiBackgroundGreen.Text = "Green";
@@ -290,7 +281,6 @@
 			// 
 			// tsmiBackgroundRed
 			// 
-			this.tsmiBackgroundRed.CheckOnClick = true;
 			this.tsmiBackgroundRed.Name = "tsmiBackgroundRed";
 			this.tsmiBackgroundRed.Size = new System.Drawing.Size(180, 22);
 			this.tsmiBackgroundRed.Text = "Red";
@@ -298,7 +288,6 @@
 			// 
 			// tsmiBackgroundBlue
 			// 
-			this.tsmiBackgroundBlue.CheckOnClick = true;
 			this.tsmiBackgroundBlue.Name = "tsmiBackgroundBlue";
 			this.tsmiBackgroundBlue.Size = new System.Drawing.Size(180, 22);
 			this.tsmiBackgroundBlue.Text = "Blue";
