@@ -276,7 +276,6 @@
 			this.MinimizeBox = false;
 			this.Name = "MainForm";
 			this.Text = "Clock_PV_521";
-			//this.Load += new System.EventHandler(this.MainForm_Load);
 			this.contextMenuStrip.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
