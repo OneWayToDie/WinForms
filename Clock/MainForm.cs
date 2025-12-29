@@ -32,7 +32,9 @@ namespace Clock
 			fontDialog = new FontDialog();
 			foregroundColorDialog = new ColorDialog();
 			backgroundColorDialog = new ColorDialog();
+			LoadSettings();
 			this.TopMost = tsmiTopmost.Checked = true;
+			this.FormClosing += (s, e) => SaveSettings();
 		}
 		void SetVisibility(bool visible)
 		{
@@ -140,6 +142,38 @@ namespace Clock
 			if (tsmiAutoStart.Checked) rk.SetValue(key_name, Application.ExecutablePath);
 			else rk.DeleteValue(key_name, false);   //false - не бросать исключение, если данная запись отсутствует в реестре.
 			rk.Dispose();
+		}
+
+		private void SaveSettings()
+		{
+			Properties.Settings.Default.WindowLocation = this.Location;
+			Properties.Settings.Default.TopMost = tsmiTopmost.Checked;
+			Properties.Settings.Default.ShowControls = tsmiShowControls.Checked;
+			Properties.Settings.Default.ShowDate = tsmiShowDate.Checked;
+			Properties.Settings.Default.ShowWeekday = tsmiShowWeekday.Checked;
+			Properties.Settings.Default.ForeColor = labelTime.ForeColor;
+			Properties.Settings.Default.BackColor = labelTime.BackColor;
+			Properties.Settings.Default.Font = labelTime.Font;
+			Properties.Settings.Default.Save();
+		}
+		private void LoadSettings()
+		{
+			var s = Properties.Settings.Default;
+
+			if (s.WindowLocation != Point.Empty)
+				this.Location = s.WindowLocation;
+
+			tsmiTopmost.Checked = s.TopMost;
+			tsmiShowControls.Checked = s.ShowControls;
+			tsmiShowDate.Checked = s.ShowDate;
+			tsmiShowWeekday.Checked = s.ShowWeekday;
+
+			this.TopMost = s.TopMost;
+			labelTime.ForeColor = s.ForeColor;
+			labelTime.BackColor = s.BackColor;
+
+			if (s.Font != null)
+				labelTime.Font = s.Font;
 		}
 	}
 }
