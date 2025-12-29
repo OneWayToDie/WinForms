@@ -15,6 +15,7 @@ namespace Clock
 	public partial class FontDialog : Form
 	{
 		public Font Font { get; set; }
+		public string Filename { get; set; }
 		int lastChosenIndex;
 		public FontDialog()
 		{
@@ -23,6 +24,15 @@ namespace Clock
 			LoadFonts("*.ttf");
 			LoadFonts("*.otf");
 			comboBoxFont.SelectedIndex = 1;
+		}
+		public FontDialog(string font_name):this()
+		{
+			Filename = font_name;
+			lastChosenIndex = comboBoxFont.FindString(font_name);
+			comboBoxFont.SelectedIndex = comboBoxFont.FindString(font_name);
+			if (comboBoxFont.SelectedIndex == -1) comboBoxFont.SelectedIndex = 1;
+			SetFont();
+			Font = labelExample.Font;
 		}
 		private void FontDialog_Load(object sender, EventArgs e)
 		{
@@ -63,7 +73,7 @@ namespace Clock
 
 		void SetFont()
 		{
-			Directory.SetCurrentDirectory($"{Application.ExecutablePath}\\..\\..\\..\\Fonts");
+			Directory.SetCurrentDirectory($"{Application.ExecutablePath}\\..\\..\\..\\fonts");
 			PrivateFontCollection pfc = new PrivateFontCollection();
 			pfc.AddFontFile(comboBoxFont.SelectedItem.ToString());
 			labelExample.Font = new Font(pfc.Families[0], (float)numericUpDownFontSize.Value);
@@ -72,6 +82,7 @@ namespace Clock
 		private void buttonOK_Click(object sender, EventArgs e)
 		{
 			this.Font = labelExample.Font;
+			this.Filename = comboBoxFont.SelectedItem.ToString();
 			this.lastChosenIndex = comboBoxFont.SelectedIndex;
 		}
 		private void buttonCancel_Click(object sender, EventArgs e)
