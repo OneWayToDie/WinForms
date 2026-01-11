@@ -54,6 +54,12 @@ namespace Clock
 		void LoadAlarms(Alarms alarms)
 		{
 			textName.Text = alarms.Name;
+			TimePicker.Value = DateTime.Today.Add(alarms.Time);
+			if(alarms.Date.HasValue)
+				datePicker.Value = alarms.Date.Value;
+			for (int i = 0; i < 7; i++)
+				((CheckBox)panelDays.Controls[i]).Checked = alarms.Days[i];
+			comboBoxMusic.Text = alarms.Music;
 		}
 	}
 }
