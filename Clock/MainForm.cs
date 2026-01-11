@@ -18,6 +18,7 @@ namespace Clock
 		ColorDialog foregroundColorDialog;
 		ColorDialog backgroundColorDialog;
 
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -209,5 +210,6 @@ namespace Clock
 		{
 			SaveSettings();
 		}
+
 	}
 }

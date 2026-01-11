@@ -44,18 +44,7 @@ namespace Clock
 		{
 			string currentDir = Application.ExecutablePath;
 			Directory.SetCurrentDirectory($"{currentDir}\\..\\..\\..\\fonts");
-			//MessageBox.Show
-			//	(
-			//	this,
-			//	//currentDir,
-			//	Directory.GetCurrentDirectory(),
-			//	"CurrenDirectory",
-			//	MessageBoxButtons.OK,
-			//	MessageBoxIcon.Information
-			//	);
 			string[] files = Directory.GetFiles(Directory.GetCurrentDirectory(), extension);
-			//comboBoxFont.Items.AddRange(files);	//Добавляем все содержимое
-			//массива 'files' в выпадающий список
 			for (int i = 0; i < files.Length; i++)
 			{
 				comboBoxFont.Items.Add( files[i].Split('\\').Last());
@@ -68,7 +57,6 @@ namespace Clock
 			info += $"\nItem:\t{comboBoxFont.SelectedItem}";
 			info += $"\nText:\t{comboBoxFont.SelectedText}";
 			info += $"\nValue:\t{comboBoxFont.SelectedValue}";
-			//MessageBox.Show(this, info, "SelectedIndexChanged", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			SetFont();
 		}
 
