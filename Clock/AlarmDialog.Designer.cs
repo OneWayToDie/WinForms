@@ -39,6 +39,14 @@
 			this.comboBoxMusic = new System.Windows.Forms.ComboBox();
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.checkBoxPn = new System.Windows.Forms.CheckBox();
+			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.checkBox2 = new System.Windows.Forms.CheckBox();
+			this.checkBox3 = new System.Windows.Forms.CheckBox();
+			this.checkBox4 = new System.Windows.Forms.CheckBox();
+			this.checkBox5 = new System.Windows.Forms.CheckBox();
+			this.checkBox6 = new System.Windows.Forms.CheckBox();
+			this.panelDays.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -54,7 +62,7 @@
 			// 
 			this.textName.Location = new System.Drawing.Point(100, 7);
 			this.textName.Name = "textName";
-			this.textName.Size = new System.Drawing.Size(200, 20);
+			this.textName.Size = new System.Drawing.Size(217, 20);
 			this.textName.TabIndex = 1;
 			// 
 			// label2
@@ -70,7 +78,7 @@
 			// 
 			this.TimePicker.Location = new System.Drawing.Point(100, 37);
 			this.TimePicker.Name = "TimePicker";
-			this.TimePicker.Size = new System.Drawing.Size(200, 20);
+			this.TimePicker.Size = new System.Drawing.Size(217, 20);
 			this.TimePicker.TabIndex = 3;
 			// 
 			// checkDate
@@ -87,14 +95,21 @@
 			// 
 			this.datePicker.Location = new System.Drawing.Point(100, 67);
 			this.datePicker.Name = "datePicker";
-			this.datePicker.Size = new System.Drawing.Size(200, 20);
+			this.datePicker.Size = new System.Drawing.Size(217, 20);
 			this.datePicker.TabIndex = 5;
 			// 
 			// panelDays
 			// 
+			this.panelDays.Controls.Add(this.checkBox6);
+			this.panelDays.Controls.Add(this.checkBox5);
+			this.panelDays.Controls.Add(this.checkBox4);
+			this.panelDays.Controls.Add(this.checkBox3);
+			this.panelDays.Controls.Add(this.checkBox2);
+			this.panelDays.Controls.Add(this.checkBox1);
+			this.panelDays.Controls.Add(this.checkBoxPn);
 			this.panelDays.Location = new System.Drawing.Point(10, 100);
 			this.panelDays.Name = "panelDays";
-			this.panelDays.Size = new System.Drawing.Size(290, 30);
+			this.panelDays.Size = new System.Drawing.Size(307, 31);
 			this.panelDays.TabIndex = 6;
 			// 
 			// label3
@@ -111,12 +126,12 @@
 			this.comboBoxMusic.FormattingEnabled = true;
 			this.comboBoxMusic.Location = new System.Drawing.Point(100, 137);
 			this.comboBoxMusic.Name = "comboBoxMusic";
-			this.comboBoxMusic.Size = new System.Drawing.Size(200, 21);
+			this.comboBoxMusic.Size = new System.Drawing.Size(217, 21);
 			this.comboBoxMusic.TabIndex = 8;
 			// 
 			// btnOK
 			// 
-			this.btnOK.Location = new System.Drawing.Point(136, 415);
+			this.btnOK.Location = new System.Drawing.Point(155, 415);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(75, 23);
 			this.btnOK.TabIndex = 9;
@@ -125,18 +140,81 @@
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(230, 415);
+			this.btnCancel.Location = new System.Drawing.Point(242, 415);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
 			this.btnCancel.TabIndex = 10;
 			this.btnCancel.Text = "Cancel";
 			this.btnCancel.UseVisualStyleBackColor = true;
 			// 
+			// checkBoxPn
+			// 
+			this.checkBoxPn.Location = new System.Drawing.Point(0, 0);
+			this.checkBoxPn.Name = "checkBoxPn";
+			this.checkBoxPn.Size = new System.Drawing.Size(40, 20);
+			this.checkBoxPn.TabIndex = 0;
+			this.checkBoxPn.Text = "Пн";
+			this.checkBoxPn.UseVisualStyleBackColor = true;
+			// 
+			// checkBox1
+			// 
+			this.checkBox1.Location = new System.Drawing.Point(45, 0);
+			this.checkBox1.Name = "checkBox1";
+			this.checkBox1.Size = new System.Drawing.Size(40, 20);
+			this.checkBox1.TabIndex = 1;
+			this.checkBox1.Text = "Вт";
+			this.checkBox1.UseVisualStyleBackColor = true;
+			// 
+			// checkBox2
+			// 
+			this.checkBox2.Location = new System.Drawing.Point(90, 0);
+			this.checkBox2.Name = "checkBox2";
+			this.checkBox2.Size = new System.Drawing.Size(40, 20);
+			this.checkBox2.TabIndex = 2;
+			this.checkBox2.Text = "Ср";
+			this.checkBox2.UseVisualStyleBackColor = true;
+			// 
+			// checkBox3
+			// 
+			this.checkBox3.Location = new System.Drawing.Point(135, 0);
+			this.checkBox3.Name = "checkBox3";
+			this.checkBox3.Size = new System.Drawing.Size(40, 20);
+			this.checkBox3.TabIndex = 3;
+			this.checkBox3.Text = "Чт";
+			this.checkBox3.UseVisualStyleBackColor = true;
+			// 
+			// checkBox4
+			// 
+			this.checkBox4.Location = new System.Drawing.Point(180, 0);
+			this.checkBox4.Name = "checkBox4";
+			this.checkBox4.Size = new System.Drawing.Size(40, 20);
+			this.checkBox4.TabIndex = 4;
+			this.checkBox4.Text = "Пт";
+			this.checkBox4.UseVisualStyleBackColor = true;
+			// 
+			// checkBox5
+			// 
+			this.checkBox5.Location = new System.Drawing.Point(225, 0);
+			this.checkBox5.Name = "checkBox5";
+			this.checkBox5.Size = new System.Drawing.Size(40, 20);
+			this.checkBox5.TabIndex = 5;
+			this.checkBox5.Text = "Сб";
+			this.checkBox5.UseVisualStyleBackColor = true;
+			// 
+			// checkBox6
+			// 
+			this.checkBox6.Location = new System.Drawing.Point(270, 0);
+			this.checkBox6.Name = "checkBox6";
+			this.checkBox6.Size = new System.Drawing.Size(40, 20);
+			this.checkBox6.TabIndex = 6;
+			this.checkBox6.Text = "Вс";
+			this.checkBox6.UseVisualStyleBackColor = true;
+			// 
 			// AlarmDialog
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(317, 450);
+			this.ClientSize = new System.Drawing.Size(329, 450);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.comboBoxMusic);
@@ -150,6 +228,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "AlarmDialog";
 			this.Text = "AlarmDialog";
+			this.panelDays.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -168,5 +247,12 @@
 		private System.Windows.Forms.ComboBox comboBoxMusic;
 		private System.Windows.Forms.Button btnOK;
 		private System.Windows.Forms.Button btnCancel;
+		private System.Windows.Forms.CheckBox checkBoxPn;
+		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.CheckBox checkBox6;
+		private System.Windows.Forms.CheckBox checkBox5;
+		private System.Windows.Forms.CheckBox checkBox4;
+		private System.Windows.Forms.CheckBox checkBox3;
+		private System.Windows.Forms.CheckBox checkBox2;
 	}
 }
