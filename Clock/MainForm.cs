@@ -17,7 +17,8 @@ namespace Clock
 		FontDialog fontDialog;
 		ColorDialog foregroundColorDialog;
 		ColorDialog backgroundColorDialog;
-
+		private List<AlarmDialog.Alarm> alarms = new List<AlarmDialog.Alarm>();
+		private Timer alarmTimer = new Timer { Interval = 10000 };
 
 		public MainForm()
 		{
@@ -34,6 +35,7 @@ namespace Clock
 			fontDialog = new FontDialog();
 			foregroundColorDialog = new ColorDialog();
 			backgroundColorDialog = new ColorDialog();
+			alarmTimer.Start();
 			LoadSettings();
 		}
 		void SetVisibility(bool visible)
@@ -127,12 +129,6 @@ namespace Clock
 		{
 			SetVisibility(tsmiShowControls.Checked = false);
 		}
-
-		//private void labelTime_MouseHover(object sender, EventArgs e)
-		//{
-		//	SetVisibility(true);
-		//}
-
 		private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
 			if (!TopMost)
@@ -211,5 +207,20 @@ namespace Clock
 			SaveSettings();
 		}
 
+		private void tsmiAlarms_Click(object sender, EventArgs e)
+		{
+			using (var dialog = new AlarmDialog())
+			{
+				if (dialog.ShowDialog() == DialogResult.OK && dialog.Result != null)
+				{
+					alarms.Add(dialog.Result);
+
+					MessageBox.Show($"Будильник '{dialog.Result.Name}' добавлен на {dialog.Result.Time:hh\\:mm}",
+								  "Будильник добавлен",
+								  MessageBoxButtons.OK,
+								  MessageBoxIcon.Information);
+				}
+			}
+		}
 	}
 }
