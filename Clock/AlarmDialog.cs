@@ -38,13 +38,5 @@ namespace Clock
 				labelFileName.Text = fileDialog.FileName;
 			}
 		}
-		private void ShowAlarmDialog()
-		{
-			using (AlarmDialog dialog = new AlarmDialog())
-			{
-				dialog.StartPosition = FormStartPosition.CenterParent;
-				dialog.ShowDialog(this);
-			}
-		}
 	}
 }
