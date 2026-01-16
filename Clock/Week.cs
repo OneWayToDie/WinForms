@@ -14,7 +14,6 @@ namespace Clock
 		{
 			this.days = days;
 		}
-		public byte DaysMask => days;
 		public override string ToString()
 		{
 			string days = "";

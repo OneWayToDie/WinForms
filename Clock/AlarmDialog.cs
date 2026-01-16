@@ -17,22 +17,6 @@ namespace Clock
 		public AlarmDialog(Alarm alarm = null)
 		{
 			InitializeComponent();
-			if (alarm != null)
-			{
-				dtpTime.Value = alarm.Time;
-				checkBoxUseDate.Checked = alarm.Date != DateTime.MaxValue;
-				if(checkBoxUseDate.Checked)dtpDate.Value = alarm.Date;
-				labelFileName.Text = alarm.Filename;
-				if (alarm.Days != null)
-				{
-					for (int i = 0; i < 7; i++)
-					{
-						byte dayMask = (byte)(1 << i);
-						bool isChecked = (alarm.Days.DaysMask & dayMask) != 0;
-						clbWeekdays.SetItemChecked(i, isChecked);
-					}
-				}
-			}
 			dtpDate.Enabled = false;
 			fileDialog = new OpenFileDialog();
 			fileDialog.Filter = "All sound files (*.mp3;*.flac;*.flacc;*.ape;*.wma)|*.mp3;*.flac;*.flacc;*.ape;*.wma" +
