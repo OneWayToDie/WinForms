@@ -21,7 +21,7 @@ namespace Clock
 			for (byte i = 0; i < 7; i++)
 			{
 				byte day = (byte)(1 << i);
-				if ((this.days & day) != 0) days += NAMES[i];
+				if ((this.days & day) != 0) days += $"{NAMES[i]},";
 			}
 			return days;
 			/*
