@@ -14,7 +14,7 @@ namespace Clock
 	{
 		OpenFileDialog fileDialog;
 		public Alarm Alarm { get; private set; }
-		public AlarmDialog(Alarm alarm = null)
+		public AlarmDialog()
 		{
 			InitializeComponent();
 			dtpDate.Enabled = false;
@@ -26,7 +26,22 @@ namespace Clock
 				"|wma files (*.wma)|*.wma";
 			Alarm = new Alarm();
 		}
-
+		public AlarmDialog(Alarm alarm) : this()
+		{
+			Alarm = alarm;
+			Extract();
+		}
+		void Extract()
+		{
+			if (Alarm.Date != DateTime.MaxValue)
+			{
+				dtpDate.Value = Alarm.Date;
+				checkBoxUseDate.Checked = true;
+			}
+			dtpTime.Value = Alarm.Time;
+			Alarm.Days.Extract(clbWeekdays);
+			labelFileName.Text = Alarm.Filename;
+		}
 		private void checkBoxUseDate_CheckedChanged(object sender, EventArgs e)
 		{
 			dtpDate.Enabled = (sender as CheckBox).Checked;
