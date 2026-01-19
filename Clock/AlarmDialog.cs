@@ -25,6 +25,8 @@ namespace Clock
 				"|ape files (*.ape)|*.ape" +
 				"|wma files (*.wma)|*.wma";
 			Alarm = new Alarm();
+			for (int i = 0; i < 7; i++)
+				clbWeekdays.SetItemChecked(i, true);
 		}
 		public AlarmDialog(Alarm alarm) : this()
 		{
