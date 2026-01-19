@@ -10,7 +10,7 @@ namespace Clock
 	public class Week
 	{
 		static readonly string[] NAMES = { "Пн", "Вт", "Ср", "Чт", "Пт", "СБ", "Вс" };
-		byte days;
+		public byte days { get; set; }
 		public Week(byte days)
 		{
 			this.days = days;

@@ -77,6 +77,15 @@ namespace Clock
 
 			System.Diagnostics.Process.Start("notepad", "Settings.ini");
 		}
+		void SaveAlarms()
+		{
+			StreamWriter writer = new StreamWriter("Alarms.ini");
+
+			writer.WriteLine($"{alarm.Date:yyyy.MM.dd HH:mm:ss}|{alarm.Days}|{alarm.Filename}");
+
+			writer.Close();
+			System.Diagnostics.Process.Start("notepad", "Alarms.ini");
+		}
 
 		void LoadSettings()
 		{
@@ -142,11 +151,6 @@ namespace Clock
 		{
 			SetVisibility(tsmiShowControls.Checked = false);
 		}
-
-		//private void labelTime_MouseHover(object sender, EventArgs e)
-		//{
-		//	SetVisibility(true);
-		//}
 
 		private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
@@ -224,6 +228,7 @@ namespace Clock
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			SaveSettings();
+			SaveAlarms();
 		}
 
 		private void tsmiAlarms_Click(object sender, EventArgs e)
