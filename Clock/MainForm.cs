@@ -77,7 +77,6 @@ namespace Clock
 
 			System.Diagnostics.Process.Start("notepad", "Settings.ini");
 		}
-
 		void LoadSettings()
 		{
 			Directory.SetCurrentDirectory($"{Application.ExecutablePath}\\..\\..\\..");

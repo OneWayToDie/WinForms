@@ -46,16 +46,17 @@
 			this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dtpDate.Location = new System.Drawing.Point(13, 47);
 			this.dtpDate.Name = "dtpDate";
-			this.dtpDate.Size = new System.Drawing.Size(131, 31);
+			this.dtpDate.Size = new System.Drawing.Size(150, 31);
 			this.dtpDate.TabIndex = 0;
 			// 
 			// dtpTime
 			// 
 			this.dtpTime.CustomFormat = "HH:mm:ss";
 			this.dtpTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpTime.Location = new System.Drawing.Point(163, 47);
+			this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+			this.dtpTime.Location = new System.Drawing.Point(230, 47);
 			this.dtpTime.Name = "dtpTime";
+			this.dtpTime.ShowUpDown = true;
 			this.dtpTime.Size = new System.Drawing.Size(132, 31);
 			this.dtpTime.TabIndex = 1;
 			// 
