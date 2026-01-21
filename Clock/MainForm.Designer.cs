@@ -55,7 +55,9 @@
 			this.cbShowWeekday = new System.Windows.Forms.CheckBox();
 			this.btnHideControls = new System.Windows.Forms.Button();
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+			this.axWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
 			this.contextMenuStrip.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// labelTime
@@ -225,7 +227,7 @@
 			// 
 			this.cbShowDate.AutoSize = true;
 			this.cbShowDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.cbShowDate.Location = new System.Drawing.Point(22, 193);
+			this.cbShowDate.Location = new System.Drawing.Point(22, 251);
 			this.cbShowDate.Name = "cbShowDate";
 			this.cbShowDate.Size = new System.Drawing.Size(176, 29);
 			this.cbShowDate.TabIndex = 1;
@@ -237,7 +239,7 @@
 			// 
 			this.cbShowWeekday.AutoSize = true;
 			this.cbShowWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.cbShowWeekday.Location = new System.Drawing.Point(22, 237);
+			this.cbShowWeekday.Location = new System.Drawing.Point(22, 295);
 			this.cbShowWeekday.Name = "cbShowWeekday";
 			this.cbShowWeekday.Size = new System.Drawing.Size(256, 29);
 			this.cbShowWeekday.TabIndex = 2;
@@ -248,7 +250,7 @@
 			// btnHideControls
 			// 
 			this.btnHideControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.btnHideControls.Location = new System.Drawing.Point(22, 273);
+			this.btnHideControls.Location = new System.Drawing.Point(22, 331);
 			this.btnHideControls.Name = "btnHideControls";
 			this.btnHideControls.Size = new System.Drawing.Size(252, 95);
 			this.btnHideControls.TabIndex = 3;
@@ -264,12 +266,24 @@
 			this.notifyIcon.Visible = true;
 			this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
 			// 
+			// axWindowsMediaPlayer
+			// 
+			this.axWindowsMediaPlayer.Enabled = true;
+			this.axWindowsMediaPlayer.Location = new System.Drawing.Point(12, 106);
+			this.axWindowsMediaPlayer.Name = "axWindowsMediaPlayer";
+			this.axWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer.OcxState")));
+			this.axWindowsMediaPlayer.Size = new System.Drawing.Size(262, 45);
+			this.axWindowsMediaPlayer.TabIndex = 4;
+			this.axWindowsMediaPlayer.Visible = false;
+			this.axWindowsMediaPlayer.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.SetPlayerInvisible);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(315, 450);
+			this.Controls.Add(this.axWindowsMediaPlayer);
 			this.Controls.Add(this.btnHideControls);
 			this.Controls.Add(this.cbShowWeekday);
 			this.Controls.Add(this.cbShowDate);
@@ -283,6 +297,7 @@
 			this.Text = "Clock_PV_521";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.contextMenuStrip.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -315,6 +330,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem tsmiQuit;
 		private System.Windows.Forms.ToolStripMenuItem tsmiShowControls;
+		private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer;
 	}
 }
 
