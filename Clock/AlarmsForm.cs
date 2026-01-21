@@ -48,26 +48,25 @@ namespace Clock
 					string line = reader.ReadLine();
 					if (string.IsNullOrEmpty(line)) continue;
 
-					// Разделяем по табуляции
 					string[] parts = line.Split('\t');
 					if (parts.Length < 4) continue;
 
 					Alarm alarm = new Alarm();
 
-					// 1. Дата (parts[0])
 					if (parts[0] == "Каждый день")
+					{
 						alarm.Date = DateTime.MaxValue;
+					}
 					else
+					{
 						alarm.Date = DateTime.ParseExact(parts[0], "yyyy.MM.dd", null);
-
-					// 2. Время (parts[1]) - формат HH:mm:ss
+					}
 					string timeStr = parts[1];
-					// Убираем дату если есть (берем только время)
 					if (timeStr.Contains(' '))
+					{
 						timeStr = timeStr.Split(' ')[1];
+					}
 					alarm.Time = TimeSpan.Parse(timeStr);
-
-					// 3. Дни недели (parts[2]) - строка типа "Пн,Вт,Ср,"
 					string daysStr = parts[2].TrimEnd(',');
 					byte daysByte = 0;
 					string[] dayParts = daysStr.Split(',');
@@ -76,7 +75,6 @@ namespace Clock
 					{
 						if (!string.IsNullOrEmpty(day))
 						{
-							// Находим индекс дня в NAMES
 							int index = Array.IndexOf(Week.NAMES, day);
 							if (index >= 0)
 							{
@@ -86,7 +84,6 @@ namespace Clock
 					}
 					alarm.Days = new Week(daysByte);
 
-					// 4. Имя файла (parts[3])
 					alarm.Filename = parts[3];
 
 					listBoxAlarms.Items.Add(alarm);
