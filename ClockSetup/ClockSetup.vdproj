@@ -1351,7 +1351,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -1434,7 +1434,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ClockPV_521"
         "ProductCode" = "8:{B869AD10-27A4-4CF6-BF78-5ED488E3B9FE}"
-        "PackageCode" = "8:{F7AD0373-1107-400B-8252-EDE56A23A1F8}"
+        "PackageCode" = "8:{F8AAD1F5-A081-4BCC-B3D1-D73981CABDD9}"
         "UpgradeCode" = "8:{4B046090-8DC2-4045-8B57-3729C1EB38D6}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
